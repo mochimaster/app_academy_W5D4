@@ -22,3 +22,17 @@ Array.prototype.bubbleSort = function () {
 };
 
 [1,3,2,5,4].bubbleSort();
+
+String.prototype.substrings = function () {
+  const result = [];
+    for (let i = 0; i < this.length; i++) {
+      for (let j = i; j < this.length; j++) {
+        result.push(this.slice(i,j+1));
+      }
+    }
+    result.my_uniq();
+    return result;
+};
+
+"test".substrings();
+
